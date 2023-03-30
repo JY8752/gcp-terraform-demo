@@ -4,3 +4,8 @@ tflint
 for FILE in `git diff --diff-filter=d --staged --name-only`; do
   git add $FILE
 done
+
+echo "***********************************************"
+echo "                 format and tflint             "
+echo "                    complete🚀                 "
+echo "***********************************************"
