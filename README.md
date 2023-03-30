@@ -29,3 +29,11 @@ terraform init
 ```
 
 GCPプロジェクトへの請求アカウントの紐付けは手動で実施。
+
+## tflint
+
+### pre-commit設定
+
+```
+git config core.hooksPath .githooks
+```
