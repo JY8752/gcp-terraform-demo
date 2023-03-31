@@ -1,6 +1,7 @@
 # project_idは6-30文字で小文字英数字で一意に指定する必要がある
 GCP_PROJECT_ID = "gcp-test-project-20230329"
 GCP_PROJECT_NAME = "gcp-test-project"
+GCS_BUCKET_NAME = "gcp-test-project-20230329-test-bucket"
 
 # GCPプロジェクトの作成
 create_project:
@@ -35,3 +36,7 @@ enable_api:
 # gcloud services enable cloudfunctions.googleapis.com
 # gcloud services enable serviceusage.googleapis.com
 # gcloud services enable secretmanager.googleapis.com
+
+# GCSにリソースをアップロードする
+upload_resources:
+	gsutil -m rsync ./resources gs://$(GCS_BUCKET_NAME)

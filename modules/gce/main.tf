@@ -1,4 +1,9 @@
 # GCEモジュール
+resource "google_compute_address" "default" {
+  name         = "gce-static-ip-address"
+  address_type = "EXTERNAL"
+}
+
 resource "google_compute_instance" "default" {
   name         = var.name
   machine_type = var.machine_type
@@ -21,7 +26,8 @@ resource "google_compute_instance" "default" {
     network = "default"
 
     access_config {
-      // Ephemeral public IP
+      // 静的IPを指定
+      nat_ip = google_compute_address.default.address
     }
   }
 
@@ -29,7 +35,7 @@ resource "google_compute_instance" "default" {
     foo = "bar"
   }
 
-  metadata_startup_script = "echo hi > /test.txt"
+  metadata_startup_script = var.metadata_startup_script
 
   // サービスアカウントを通してのアクセス権限付与
   service_account {
@@ -37,4 +43,5 @@ resource "google_compute_instance" "default" {
     email  = var.service_account_email
     scopes = var.service_account_scopes
   }
+
 }

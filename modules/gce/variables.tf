@@ -33,3 +33,9 @@ variable "service_account_scopes" {
   default     = ["cloud-platform"]
   description = "Access scope to be set for the service account."
 }
+
+variable "metadata_startup_script" {
+  type        = string
+  default     = ""
+  description = "It's a gce instance metadata startup script."
+}

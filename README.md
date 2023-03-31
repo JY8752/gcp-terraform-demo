@@ -37,3 +37,11 @@ GCPプロジェクトへの請求アカウントの紐付けは手動で実施�
 ```
 git config core.hooksPath .githooks
 ```
+
+## GCE
+
+GCEインスタンス起動時にGCSバケットのマウントとnginxの起動を実行する。
+
+GCEへのファイルアップロートは手動で実行する。
+
+nginxのwelcomeページの変更も手動で実行。GCSに配置したindex.htmlと画像ファイルをcpしてrootに配置した。
