@@ -25,6 +25,9 @@ add_account:
 # GCPのAPI有効化
 enable_api:
 	gcloud services enable compute.googleapis.com
+	gcloud services enable cloudfunctions.googleapis.com
+	gcloud services enable sqladmin.googleapis.com
+	gcloud services enable servicenetworking.googleapis.com
 # gcloud services enable artifactregistry.googleapis.com
 # gcloud services enable appengine.googleapis.com
 # gcloud services enable iam.googleapis.com
@@ -33,7 +36,6 @@ enable_api:
 # gcloud services enable firebase.googleapis.com
 # gcloud services enable cloudbuild.googleapis.com
 # gcloud services enable runtimeconfig.googleapis.com
-# gcloud services enable cloudfunctions.googleapis.com
 # gcloud services enable serviceusage.googleapis.com
 # gcloud services enable secretmanager.googleapis.com
 

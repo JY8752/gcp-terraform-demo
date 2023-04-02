@@ -39,3 +39,15 @@ variable "metadata_startup_script" {
   default     = ""
   description = "It's a gce instance metadata startup script."
 }
+
+variable "network" {
+  type        = string
+  default     = "default"
+  description = "It's a gce instance network."
+}
+
+variable "subnet" {
+  type        = string
+  default     = ""
+  description = "It's a gce instance subnet."
+}

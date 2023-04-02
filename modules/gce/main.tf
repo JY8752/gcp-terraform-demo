@@ -23,7 +23,8 @@ resource "google_compute_instance" "default" {
 
   // インスタンスにアタッチするネットワーク
   network_interface {
-    network = "default"
+    network    = var.network
+    subnetwork = var.subnet
 
     access_config {
       // 静的IPを指定
