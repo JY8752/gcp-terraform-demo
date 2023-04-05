@@ -52,14 +52,14 @@ variable "zone" {
   description = "The zone of instance."
 }
 
-variable "target_size" {
-  type        = number
-  default     = 3
-  description = "The target size of autoscaling."
-}
+# variable "target_size" {
+#   type        = number
+#   default     = 3
+#   description = "The target size of autoscaling."
+# }
 
-variable "region" {
-  type        = string
-  default     = "asia-northeast1"
-  description = "The region of autoscaling."
-}
+# variable "region" {
+#   type        = string
+#   default     = "asia-northeast1"
+#   description = "The region of autoscaling."
+# }
