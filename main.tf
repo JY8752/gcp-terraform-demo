@@ -101,3 +101,7 @@ module "db" {
     module.private_network
   ]
 }
+
+module "firestore" {
+  source = "./modules/firestore"
+}
