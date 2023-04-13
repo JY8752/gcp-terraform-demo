@@ -45,3 +45,12 @@ GCEインスタンス起動時にGCSバケットのマウントとnginxの起動
 GCEへのファイルアップロートは手動で実行する。
 
 nginxのwelcomeページの変更も手動で実行。GCSに配置したindex.htmlと画像ファイルをcpしてrootに配置した。
+
+## Cloud Functions
+
+```
+curl -H "Authorization: bearer $(gcloud auth print-identity-token)" https://connect-firestore-zwdl5jyiha-uc.a.run.app
+
+User: map[age:32 name:user]
+Complete!!%           
+```
